@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="application/javascript">
+        function loadXhr() {
+            console.log(performance.now().toFixed(2), "sending xhr...");
+            var x = new XMLHttpRequest();
+            x.open("GET", "chunked-response.txt");
+            x.onreadystatechange = () => {
+                console.log("received update, readystate " + x.readyState);
+            };
+            x.send();
+            
+            setTimeout(function() {
+                var div = document.createElement("div");
+                div.id = "pw-finished";
+                document.body.appendChild(div);
+                console.log(performance.now().toFixed(2), "div attached!");
+            }, 1000);
+        }
+    </script>
+</head>
+<body onload="loadXhr()">
+loads some long request onload
+</body>
+</html>
