@@ -1,0 +1,32 @@
+{
+  "name": "playwright-chunked-response",
+  "version": "1.0.0",
+  "description": "Reproducer repo for playwright bug in webkit not resolving waitForSelector promise",
+  "main": "source/server.mjs",
+  "scripts": {
+    "start": "node source/server.mjs",
+    "build": "tsc",
+    "test": "playwright test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DerGernTod/playwright-chunked-response.git"
+  },
+  "keywords": [
+    "playwright",
+    "webkit",
+    "typescript"
+  ],
+  "author": "gernot.raudner@dynatrace.com",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/DerGernTod/playwright-chunked-response/issues"
+  },
+  "homepage": "https://github.com/DerGernTod/playwright-chunked-response#readme",
+  "dependencies": {
+    "@playwright/test": "1.25.0",
+    "@types/node": "^18.14.2",
+    "typescript": "^4.9.5"
+  }
+}
